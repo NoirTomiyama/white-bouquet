@@ -30,8 +30,6 @@ module WhiteBouquet
     # the framework and any gems in your application.
 
     # Don't generate system test files.
-
-    config.hosts << "da9ca94d58324f09a1a3183d9fd2889b.vfs.cloud9.ap-northeast-1.amazonaws.com"
     config.generators.system_tests = nil
   end
 end
