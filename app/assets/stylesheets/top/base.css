@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+Author: Kana Kotera
+*/
+
+#header {
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 60px;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+section,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+header,
+footer,
+nav,
+article,
+section,
+figure,
+aside {
+  display: block;
+}
+
+body {
+  color: #444;
+  font-family: "游ゴシック", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 62.5%;
+  text-align: left;
+  background: #FFF;
+  background-image: url(/images/background.png);
+  background-repeat: center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+address,
+caption,
+cite,
+code,
+em,
+strong,
+th,
+input,
+textarea {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dt,
+dd,
+th,
+td {
+  text-align: left;
+}
+
+/* base style
+------------------------------------------------------------------------- */
+
+p {
+  line-height: 1.4;
+  text-align: left;
+}
+
+li {
+  line-height: 1.4;
+  list-style: none;
+}
+
+fieldset,
+img,
+hr {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-style: none;
+}
+
+th {
+  line-height: 1.4;
+}
+
+td {
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+a {
+  border: none;
+  color: #2B85B0;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+label,
+input[type=button],
+input[type=submit] {
+  cursor: pointer;
+}
+
+/* clear
+------------------------------------------------------------------------- */
+
+.clear:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+* + html .clear {
+  /* for ie7 */
+  display: inline-block;
+}
+
+
+/* contents
+------------------------------------------------------------------------- */
+
+section {
+  clear: both;
+}
+
+@media screen and (min-width : 375px) {
+
+  body {
+    font-size: 14px;
+    font-size: 62.5%;
+  }
+
+  p {
+    line-height: 1.4;
+  }
+
+}
+
+@media screen and (min-width: 1001px) {}
