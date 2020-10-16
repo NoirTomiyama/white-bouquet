@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+    root to: 'top#index'
+    
+    get '/rankings', to: 'top#show'
 end
