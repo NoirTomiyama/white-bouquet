@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>WhiteBouquet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" href="https://www.tipdip.jp/demo/masonry/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.tipdip.jp/demo/masonry/images/favicon.png">
+    <%= favicon_link_tag('favicon.ico') %>
+    <%= stylesheet_link_tag "top/base", :media => "all" %>
+    <%= stylesheet_link_tag "top/style", :media => "all" %>
+    <%= stylesheet_link_tag "top/material-design-iconic-font.min", :media => "all" %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'func' %>
+    <%= javascript_include_tag 'imagesloaded.pkgd.min' %>
+    <%= javascript_include_tag 'jquery.min' %>
+    <%= javascript_include_tag 'masonry.pkgd.min' %>
+
   </head>
 
   <body>
