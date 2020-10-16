@@ -19,7 +19,6 @@ class TopController < ApplicationController
     end
     # obj = bucket.object('test/test.png')
     # @image_url = obj.presigned_url(:get)
-    @size =  @images.size
   end
     
   def show

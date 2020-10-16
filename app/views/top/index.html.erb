@@ -1,13 +1,12 @@
 <div id="header">
   <%= image_tag 'logo01.png' %>
-  <%= @size %>
 </div>
 <div id="wrapper">
   <main id="main">
     <div id="loading" style="display: none;">
       <p class="btn btn-default btn-lg"><i class="zmdi zmdi-rotate-right zmdi-hc-spin"></i></p>
     </div>
-    <ul id="gallery" class="on" style="position: relative; width: 1240px;">
+    <ul id="gallery" class="on" style="position: relative; width: 1240px; height: 1433.78px;">
         <li class="item">
           <%= image_tag 'dummy6.jpg' %>
           <p>
@@ -54,6 +53,9 @@
       <li class="item">
         <%= image_tag 'dummy.jpg' %>
       </li>
+      <% @images.each do |image| %>
+        <li class="item"><img src=<%= image %>></li>
+      <% end %>
     </ul>
   </main>
 </div>
