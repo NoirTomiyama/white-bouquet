@@ -44,6 +44,12 @@ main {
     padding: 10px;
 }
 
+#gallery li p {
+	font-size: 30px; 
+	margin-top: 12px;
+	text-align: center;
+}
+
 img {
     max-width: 100%;
     height: auto;
