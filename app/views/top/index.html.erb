@@ -89,13 +89,6 @@
       <li class="item">
         <%= image_tag 'dummy.jpg' %>
       </li>
-      <% @images.each do |image| %>
-        <li class="item">
-        <%=  link_to image, 'data-lightbox': image do %>
-          <img src=<%= image %>>
-        <% end %>
-        </li>
-      <% end %>
     </ul>
   </main>
 </div>
