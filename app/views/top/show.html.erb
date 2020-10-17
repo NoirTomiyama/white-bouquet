@@ -1,5 +1,23 @@
-<h1>show.html.erb</h1>
-
-<ul>
-  <li><%= @message %></li>
-</ul>
+<div id="header">
+  <%= image_tag 'logo01.png' %>
+</div>
+<div id="wrapper">
+  <main id="main">
+    <div id="loading" style="display: none;">
+      <p class="btn btn-default btn-lg"><i class="zmdi zmdi-rotate-right zmdi-hc-spin"></i></p>
+    </div>
+    <ul id="gallery" class="on" style="position: relative; width: 1240px">
+      <% @object_list.each do |object| %>
+        <li class="item">
+        <%=  link_to object[:image], 'data-lightbox': object[:image] do %>
+          <img src=<%= object[:image] %> >
+        <% end %>
+          <p>
+            <i class="fas fa-camera-retro"></i> <%= object[:name] %> さん<br>
+            <i class="far fa-smile-wink"></i> <%= object[:score]&.round(4) %> 点
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  </main>
+</div>
