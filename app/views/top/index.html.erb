@@ -89,6 +89,17 @@
       <li class="item">
         <%= image_tag 'dummy.jpg' %>
       </li>
+      <% @object_list.each do |object| %>
+        <li class="item">
+        <%=  link_to object[:image], 'data-lightbox': object[:image] do %>
+          <img src=<%= object[:image] %> >
+        <% end %>
+          <p>
+            <i class="fas fa-camera-retro"></i> <%= object[:name] %><br>
+            <i class="far fa-smile-wink"></i> <%= object[:score]&.round %> 点
+          </p>
+        </li>
+      <% end %>
     </ul>
   </main>
 </div>

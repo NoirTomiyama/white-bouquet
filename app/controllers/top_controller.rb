@@ -40,7 +40,7 @@ class TopController < ApplicationController
     @object_list.each do |object|
       puts object[:image]
       puts object[:name]
-      puts object[:score].round
+      puts object[:score]&.round
     end
   end
     
