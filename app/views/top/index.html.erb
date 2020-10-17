@@ -35,69 +35,11 @@
             <i class="far fa-smile-wink"></i> 100点
           </p>
         </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy2.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <li class="item">
-        <%= image_tag 'dummy.jpg' %>
-      </li>
-      <% @object_list.each do |object| %>
+      <% @images.each do |image| %>
         <li class="item">
-        <%=  link_to object[:image], 'data-lightbox': object[:image] do %>
-          <img src=<%= object[:image] %> >
-        <% end %>
-          <p>
-            <i class="fas fa-camera-retro"></i> <%= object[:name] %><br>
-            <i class="far fa-smile-wink"></i> <%= object[:score]&.round %> 点
-          </p>
+          <%=  link_to image, 'data-lightbox': image do %>
+            <img src=<%= image %> >
+          <% end %>
         </li>
       <% end %>
     </ul>

@@ -9,6 +9,29 @@ class TopController < ApplicationController
         ENV['AWS_SECRET_ACCESS_KEY']
       )
     )
+    bucket = resource.bucket('my-bucket-sample-1038')
+
+    @images = []
+    bucket.objects.each do |object|
+      if((object.key).include?('images/')) then
+        puts "Name:  #{object.key}"
+        puts "URL:   #{object.presigned_url(:get)}"
+        # @image_url = object.presigned_url(:get)
+        @images.push(object.presigned_url(:get))
+      end
+    end
+  end
+
+  def show
+    @message = "show"
+
+    resource = Aws::S3::Resource.new(
+      region: "ap-northeast-1",
+      credentials: Aws::Credentials.new(
+        ENV['AWS_ACCESS_KEY_ID'],
+        ENV['AWS_SECRET_ACCESS_KEY']
+      )
+    )
     bucket_name = 'my-bucket-sample-1038'
     bucket = resource.bucket('my-bucket-sample-1038')
 
@@ -36,15 +59,5 @@ class TopController < ApplicationController
         @object_list.push(item)
       end
     end
-
-    @object_list.each do |object|
-      puts object[:image]
-      puts object[:name]
-      puts object[:score]&.round
-    end
-  end
-    
-  def show
-    @message = "show"
   end
 end
